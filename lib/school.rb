@@ -22,7 +22,9 @@ class School
   end
   
   def sort
-    @roster.each_value {|value| value.sort}
+    @roster.each do |grade, students_list|
+      @roster[grade] = students_list.sort
+    end
   end
 
 end
