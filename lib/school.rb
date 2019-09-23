@@ -22,7 +22,7 @@ class School
   end
   
   def sort
-    @roster.all do |grade, students_list|
+    for grade, students_list in @roster
       @roster[grade] = students_list.sort
     end
   end
